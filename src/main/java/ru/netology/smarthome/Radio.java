@@ -29,20 +29,6 @@ public class Radio {
         }
     }
 
-    public void setCurrentVolume(int volume) {
-        if (volume < 0) {
-            return;
-        }
-        if (volume > 100) {
-            return;
-        }
-        currentVolume = volume;
-    }
-
-    public int getVolume() {
-        return currentVolume;
-    }
-
     public void nextStation() {
         if (stationNumber == stationCount - 1) {
             stationNumber = 0;
@@ -57,19 +43,5 @@ public class Radio {
         } else {
             stationNumber--;
         }
-    }
-
-    public void setStationNumber(int station) {
-        if (station < 0) {
-            return;
-        }
-        if (station > stationCount - 1) {
-            return;
-        }
-        stationNumber = station;
-    }
-
-    public int getStation() {
-        return stationNumber;
     }
 }
